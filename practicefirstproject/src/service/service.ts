@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class Service {
 
-  baseUrl: string="http://localhost:3000/students";
+  baseUrl: string = "http://localhost:3000/students";
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAllStudent():Observable<any>{
+  getAllStudent(): Observable<any> {
 
     return this.http.get(this.baseUrl);
   }

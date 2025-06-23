@@ -7,14 +7,16 @@ import { Service } from '../service';
   templateUrl: './view-allstudent.html',
   styleUrl: './view-allstudent.css'
 })
+
 export class ViewAllstudent implements OnInit{
 students: any;
 
   constructor(private service : Service){}
 
   ngOnInit(): void {
-    this.loadAllStudent;
+    this.loadAllStudent();
   }
+
   loadAllStudent(){
     this.students = this.service.getAllStudent();
   }
