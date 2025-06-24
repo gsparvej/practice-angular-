@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Service } from '../service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-allstudent',
@@ -11,7 +12,10 @@ import { Service } from '../service';
 export class ViewAllstudent implements OnInit{
 students: any;
 
-  constructor(private service : Service){}
+  constructor(
+    private service : Service,
+    private cdr : ChangeDetectorRef
+  ){}
 
   ngOnInit(): void {
     this.loadAllStudent();
@@ -19,6 +23,32 @@ students: any;
 
   loadAllStudent(){
     this.students = this.service.getAllStudent();
+  }
+
+
+  deleteStu(id: string): void{
+this.service.deleteStudent(id).subscribe({
+
+  next: (resp) =>{
+
+    console.log("Student Deleted",resp);
+    this.cdr.reattach();
+    this.loadAllStudent();
+
+  },
+  error: (err) => {
+
+    console.log(err);
+
+
+  }
+
+
+
+
+})
+
+
   }
 
 }
