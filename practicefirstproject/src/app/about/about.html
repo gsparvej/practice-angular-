@@ -1,5 +1,132 @@
-<div class="container bg-danger p-3 my-3 rounded">
 
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&family=Segoe+UI+Emoji&display=swap');
 
+    * {
+      box-sizing: border-box;
+    }
 
-</div>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #3a7bd5, #3ad5a0);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    p.description {
+      max-width: 720px;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 50px;
+      text-align: center;
+      text-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-radius: 15px;
+      padding: 25px 30px;
+      flex: 1 1 280px;
+      box-shadow:
+        0 10px 15px rgba(0, 0, 0, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: default;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow:
+        0 20px 30px rgba(0, 0, 0, 0.15),
+        0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card .icon {
+      font-family: 'Segoe UI Emoji', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 18px;
+      user-select: none;
+    }
+
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .card p {
+      flex-grow: 1;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .cards-container {
+        flex-direction: column;
+        gap: 25px;
+      }
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+
+<body>
+  <h1>About Our School Management System</h1>
+  <p class="description">
+    Our School Management System is a powerful platform designed to revolutionize the way schools operate.
+    By automating routine tasks such as exams, fees, and scheduling, we help educational institutions focus on what matters most — quality learning.<br><br>
+    Our intuitive interface connects students, teachers, and parents, fostering communication and transparency across all levels.
+  </p>
+
+  <div class="cards-container mb-3">
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>Exams & Results</h3>
+      <p>Easily schedule exams, enter grades, and generate detailed performance reports.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>Fee Management</h3>
+      <p>Simplify fee collection, track payments, and automate reminders for timely dues.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📅</div>
+      <h3>Timetable & Scheduling</h3>
+      <p>Create dynamic schedules for classes, teachers, and rooms with drag-and-drop ease.</p>
+    </div>
+  </div>
+</body>
+
