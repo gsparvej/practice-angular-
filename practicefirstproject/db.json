@@ -1,12 +1,6 @@
 {
   "students": [
     {
-      "id": "2",
-      "name": "Rahmat",
-      "email": "rahmatullah@gmail.com",
-      "fee": 18000
-    },
-    {
       "id": "3",
       "name": "Reja",
       "email": "reja@gmail.com",
