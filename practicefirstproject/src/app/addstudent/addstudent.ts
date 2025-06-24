@@ -51,19 +51,9 @@ export class Addstudent implements OnInit {
 
       }
 
-<<<<<<< Updated upstream
-=======
-     
-
->>>>>>> Stashed changes
 
 
 
 })
   }
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 }

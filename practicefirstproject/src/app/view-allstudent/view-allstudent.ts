@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Service } from '../service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-allstudent',
@@ -9,46 +8,37 @@ import { Router } from '@angular/router';
   styleUrl: './view-allstudent.css'
 })
 
-export class ViewAllstudent implements OnInit{
-students: any;
+export class ViewAllstudent implements OnInit {
+  students: any;
 
   constructor(
-    private service : Service,
-    private cdr : ChangeDetectorRef
-  ){}
+    private service: Service,
+    private cdr: ChangeDetectorRef
+  ) { }
 
   ngOnInit(): void {
     this.loadAllStudent();
   }
 
-  loadAllStudent(){
+  loadAllStudent() {
     this.students = this.service.getAllStudent();
   }
 
 
-  deleteStu(id: string): void{
-this.service.deleteStudent(id).subscribe({
+  deleteStu(id: string): void {
+    this.service.deleteStudent(id).subscribe({
 
-  next: (resp) =>{
+      next: (resp) => {
 
-    console.log("Student Deleted",resp);
-    this.cdr.reattach();
-    this.loadAllStudent();
+        console.log("Student Deleted", resp);
+        this.cdr.reattach();
+        this.loadAllStudent();
 
-  },
-  error: (err) => {
-
-    console.log(err);
-
-
-  }
-
-
-
-
-})
-
-
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
   }
 
 }
