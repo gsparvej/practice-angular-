@@ -50,7 +50,7 @@ export class ViewAllstudent implements OnInit {
       next: (res) => {
 
         console.log("id get succesfully",res);
-        this.router.navigate(['/']);
+        this.router.navigate(['/updatestu',id]);
 
       },
       error: (err) => {

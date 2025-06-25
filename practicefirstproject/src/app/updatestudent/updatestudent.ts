@@ -25,7 +25,7 @@ constructor(
 ){}
 
   ngOnInit(): void {
-    this.loadStudentById;
+    this.loadStudentById();
   }
 
 

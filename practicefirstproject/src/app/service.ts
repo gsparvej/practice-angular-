@@ -31,14 +31,14 @@ return this.http.delete(this.baseUrl+"/"+id)
 
   getStudentById(id: string): Observable<any>{
 
-    return this.http.get(this.baseUrl+'/id'+id)
+    return this.http.get(this.baseUrl+'/'+id)
 
 
   }
   updateStudent(id: string, student: Student): Observable<any>{
 
 
-    return this.http.put(this.baseUrl+'/id'+id, student);
+    return this.http.put(this.baseUrl+'/'+id, student);
   }
   
 
