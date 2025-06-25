@@ -28,5 +28,19 @@ export class Service {
 return this.http.delete(this.baseUrl+"/"+id)
 
       }
+
+  getStudentById(id: string): Observable<any>{
+
+    return this.http.get(this.baseUrl+'/id'+id)
+
+
+  }
+  updateStudent(id: string, student: Student): Observable<any>{
+
+
+    return this.http.put(this.baseUrl+'/id'+id, student);
+  }
   
+
+
 }

@@ -17,7 +17,7 @@
         <td>{{s.email}}</td>
         <td>{{s.fee}}</td>
         <td>
-            <button class="btn btn-warning m-1 p-1">Edit</button>
+            <button class="btn btn-warning m-1 p-1" (click)="getStuById(s.id)">Edit</button>
             <button class="btn btn-danger m-1 p-1" (click)="deleteStu(s.id)">Delete</button>
         </td>
     </tr>
