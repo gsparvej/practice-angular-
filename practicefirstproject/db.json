@@ -2,15 +2,21 @@
   "students": [
     {
       "id": "a027",
-      "name": "Md. Parvej Hossen",
+      "name": "Md. Parvej ",
       "email": "parvejmd4469@gmail.com",
-      "fee": 20
+      "fee": 20254
     },
     {
       "id": "f43d",
       "name": "Eiasin Prodhan",
-      "email": "ergerh",
-      "fee": 3000
+      "email": "eiasin@gmail.com",
+      "fee": 30000
+    },
+    {
+      "id": "17d4",
+      "name": "Atik",
+      "email": "atik@gmail.com",
+      "fee": 25045
     }
   ],
   "locations": [
