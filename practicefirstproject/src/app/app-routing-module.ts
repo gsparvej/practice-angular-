@@ -5,6 +5,7 @@ import { About } from './about/about';
 import { Login } from './login/login';
 import { ViewAllstudent } from './view-allstudent/view-allstudent';
 import { Addstudent } from './addstudent/addstudent';
+import { Updatestudent } from './updatestudent/updatestudent';
 
 const routes: Routes = [
   {path:'',component:Login},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'about', component: About},
   {path:'login', component: Login},
   {path:'view-allstu', component: ViewAllstudent},
-  {path:'addstuform',component: Addstudent}
+  {path:'addstuform',component: Addstudent},
+  {path:'updatestu/:id', component: Updatestudent}
 ];
 
 @NgModule({
